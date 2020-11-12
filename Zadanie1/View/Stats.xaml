@@ -1,0 +1,49 @@
+﻿<Window x:Class="Zadanie1.View.Stats"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadanie1.View"
+        mc:Ignorable="d"
+        Title="Stats" Height="450" Width="1100">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF636F81" Offset="0"/>
+                <GradientStop Color="#FF84A4C5" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="383*"></RowDefinition>
+            <RowDefinition Height="36*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Name="Canv" Grid.Row="0" VerticalAlignment="Bottom">
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <StackPanel.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InactiveCaptionColorKey}}"/>
+            </StackPanel.Background>
+            <Label Content="По месяцам:" VerticalAlignment="Center"></Label>
+            <ComboBox Width="190" Height="25" Name="YearStat"  SelectionChanged="YearStat_SelectionChanged"></ComboBox>
+
+            <Rectangle Margin="5 0 5 0" Width="2" Fill="#FF636363"></Rectangle>
+
+            <Label Content="По годам:" VerticalAlignment="Center"></Label>
+            <TextBox Width="90" Height="25" Name="yearTextBoxBe"></TextBox>
+            <TextBox Width="90" Height="25" Name="yearTextBoxAf" Margin="5 0 0 0"></TextBox>
+            <Button Content="Применить" Width="120" Height="25" Margin="5 0 0 0" Click="Button_Click"></Button>
+
+            <Rectangle Margin="5 0 5 0" Width="2" Fill="#FF636363"></Rectangle>
+
+            <Label Content="По дням недели:" VerticalAlignment="Center"></Label>
+            <ComboBox Width="190" Height="25" Name="MonthStat"  SelectionChanged="YearStat_SelectionChanged"></ComboBox>
+            <Button Content="Применить" Width="120" Height="25" Margin="5 0 0 0"></Button>
+
+
+        </StackPanel>
+
+    </Grid>
+</Window>
